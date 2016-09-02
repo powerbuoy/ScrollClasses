@@ -7,7 +7,7 @@
 	else {
 		factory(jQuery, requestAnimationFrame);
 	}
-}(function ($, raf) {
+})(function ($, raf) {
 	'use strict';
 
 	$.fn.scrollClasses = function (conf) {
