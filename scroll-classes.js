@@ -2,12 +2,12 @@
 	'use strict';
 
 	if (typeof module === 'object' && typeof module.exports === 'object') {
-		module.exports = factory(require('jquery'), require('raf'));
+		module.exports = factory(require('jquery'));
 	}
 	else {
-		factory(jQuery, requestAnimationFrame);
+		factory(jQuery);
 	}
-})(function ($, raf) {
+})(function ($) {
 	'use strict';
 
 	$.fn.scrollClasses = function (conf) {
@@ -66,10 +66,10 @@
 					el.addClass('at-top').removeClass('has-scrolled scrolling-down has-scrolled-down scrolling-down-far has-scrolled-down-far scrolling-up has-scrolled-up scrolling-up-far has-scrolled-up-far');
 				}
 
-				raf(addScrollClasses);
+				window.requestAnimationFrame(addScrollClasses);
 			};
 
-			addScrollClasses();
+			window.requestAnimationFrame(addScrollClasses);
 		});
 	};
 });
