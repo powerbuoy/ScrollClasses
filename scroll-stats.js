@@ -70,7 +70,7 @@
 				window.requestAnimationFrame(addScrollClasses);
 			};
 
-			window.on('scroll', function () {
+			$(window).on('scroll', function () {
 				window.requestAnimationFrame(addScrollClasses);
 			});
 		});
