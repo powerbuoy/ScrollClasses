@@ -66,9 +66,9 @@
 				else {
 					el.addClass('at-top').removeClass('has-scrolled scrolling-down has-scrolled-down scrolling-down-far has-scrolled-down-far scrolling-up has-scrolled-up scrolling-up-far has-scrolled-up-far');
 				}
-
-				window.requestAnimationFrame(addScrollClasses);
 			};
+
+			window.requestAnimationFrame(addScrollClasses);
 
 			$(window).on('scroll', function () {
 				window.requestAnimationFrame(addScrollClasses);
