@@ -1,3 +1,4 @@
+// TODO: Remove jQuery dependency
 (function (factory) {
 	'use strict';
 
@@ -10,7 +11,7 @@
 })(function ($) {
 	'use strict';
 
-	$.fn.scrollClasses = function (conf) {
+	$.fn.scrollStats = function (conf) {
 		var config = $.extend({
 			sensitivity: 100
 		}, conf);
@@ -69,7 +70,9 @@
 				window.requestAnimationFrame(addScrollClasses);
 			};
 
-			window.requestAnimationFrame(addScrollClasses);
+			window.on('scroll', function () {
+				window.requestAnimationFrame(addScrollClasses);
+			});
 		});
 	};
 });
